@@ -27,7 +27,7 @@ SECRET_KEY = '*bzwzl9d&aq)rg2z9(@twit_)=5fp77et3i&l4-xp1h$r)^+gp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok-free.app' , 'https://vnpay-demo.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok-free.app' , 'vnpay-demo.onrender.com']
 
 # Application definition
 
