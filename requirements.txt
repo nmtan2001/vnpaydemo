@@ -52,7 +52,6 @@ debugpy==1.8.1
 decorator==4.4.2
 defusedxml==0.7.1
 distro==1.7.0
-distro-info==1.1+ubuntu0.2
 dj-database-url==2.2.0
 Django==3.2.4
 django-livereload-server==0.5.1
