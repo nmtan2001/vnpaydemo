@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*bzwzl9d&aq)rg2z9(@twit_)=5fp77et3i&l4-xp1h$r)^+gp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok-free.app']
 
@@ -123,10 +123,7 @@ STATICFILES_DIRS = (
 STATIC_URL = '/static/'
 #render config
 if not DEBUG:
-    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
-    # and renames the files with unique names for each version to support long-term caching
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # VNPAY CONFIG
@@ -135,3 +132,5 @@ VNPAY_PAYMENT_URL = 'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html'  # get 
 VNPAY_API_URL = 'https://sandbox.vnpayment.vn/merchant_webapi/api/transaction'
 VNPAY_TMN_CODE = '7X3S63O1'  # Website ID in VNPAY System, get from config
 VNPAY_HASH_SECRET_KEY = '4GC44G9ZVIXSQ1IZ2F86T5ZYSGMMV0G2'  # Secret key for create checksum,get from config
+
+print("STATIC_ROOT:", STATIC_ROOT)
