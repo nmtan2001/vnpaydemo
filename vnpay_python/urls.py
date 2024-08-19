@@ -18,12 +18,13 @@ from django.contrib import admin
 
 import vnpay_python.views
 
+
 urlpatterns = [
-    url(r'^$', vnpay_python.views.index, name='index'),
-    url(r'^payment$', vnpay_python.views.payment, name='payment'),
-    url(r'^payment_ipn$', vnpay_python.views.payment_ipn, name='payment_ipn'),
-    url(r'^payment_return$', vnpay_python.views.payment_return, name='payment_return'),
-    url(r'^query$', vnpay_python.views.query, name='query'),
-    url(r'^refund$', vnpay_python.views.refund, name='refund'),
-    url(r'^admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('payment/', views.payment, name='payment'),
+    path('payment_ipn/', views.payment_ipn, name='payment_ipn'),
+    path('payment_return/', views.payment_return, name='payment_return'),
+    path('query/', views.query, name='query'),
+    path('refund/', views.refund, name='refund'),
+    path('admin/', admin.site.urls),
 ]
